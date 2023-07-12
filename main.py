@@ -3,9 +3,9 @@ from psycopg2.extras import RealDictCursor
 
 conn = connect(cursor_factory=RealDictCursor,
                dbname="cakes",
-               host="XXXXXXXX",
-               password="XXXXXXX",
-               user="XXXXXXXX")
+               host="",
+               password="",
+               user="")
 
 if __name__ == "__main__":
 

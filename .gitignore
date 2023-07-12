@@ -2,3 +2,6 @@ __pycache__
 .vscode
 .DS_Store
 venv
+.env
+.env.development
+.env.production
