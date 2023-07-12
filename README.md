@@ -2,9 +2,11 @@
 
 A deployable Python app with a DB, designed to illustrate good practice in handling resources/environments.
 
-## Installation
+## Installation & setup
 
 `pip3 install -r requirements.txt`
+
+`psql postgres -f setup.sql`
 
 ## Development
 

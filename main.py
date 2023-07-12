@@ -1,6 +1,17 @@
-from psycopg2.extras import RealDictConnection
+from psycopg2 import connect
+from psycopg2.extras import RealDictCursor
 
+conn = connect(cursor_factory=RealDictCursor,
+               dbname="cakes",
+               host="XXXXXXXX",
+               password="XXXXXXX",
+               user="XXXXXXXX")
 
 if __name__ == "__main__":
 
-    raise NotImplementedError("You haven't written the code yet!")
+    with conn.cursor() as cur:
+        cur.execute("SELECT * FROM cake;")
+        data = cur.fetchall()
+
+    for row in data:
+        print(row["flavour"])
